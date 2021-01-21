@@ -4,6 +4,8 @@ from apps.store.models import Category, Product
 
 from django.test import TestCase
 
+#Testy sprawdzające poprawność zwracanych danych przez metody klas
+
 class TestCoupon(TestCase):
     def create_coupon(self, code="test", value=123, active = False, num_available=20, num_used=20):
         return Coupon.objects.create(code=code, value=value, active=active, num_available=num_available, num_used=num_used)
