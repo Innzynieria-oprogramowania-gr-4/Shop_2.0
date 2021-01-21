@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage report</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="coverage_html.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(coverage.index_ready);
+    </script>
+</head>
+<body class="indexfile">
+<div id="header">
+    <div class="content">
+        <h1>Coverage report:
+            <span class="pc_cov">49%</span>
+        </h1>
+        <img id="keyboard_icon" src="keybd_closed.png" alt="Show keyboard shortcuts" />
+        <form id="filter_container">
+            <input id="filter" type="text" value="" placeholder="filter..." />
+        </form>
+    </div>
+</div>
+<div class="help_panel">
+    <img id="panel_icon" src="keybd_open.png" alt="Hide keyboard shortcuts" />
+    <p class="legend">Hot-keys on this page</p>
+    <div>
+    <p class="keyhelp">
+        <span class="key">n</span>
+        <span class="key">s</span>
+        <span class="key">m</span>
+        <span class="key">x</span>
+        <span class="key">c</span> &nbsp; change column sorting
+    </p>
+    </div>
+</div>
+<div id="index">
+    <table class="index">
+        <thead>
+            <tr class="tablehead" title="Click to sort">
+                <th class="name left headerSortDown shortkey_n">Module</th>
+                <th class="shortkey_s">statements</th>
+                <th class="shortkey_m">missing</th>
+                <th class="shortkey_x">excluded</th>
+                <th class="right shortkey_c">coverage</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr class="total">
+                <td class="name left">Total</td>
+                <td>692</td>
+                <td>354</td>
+                <td>0</td>
+                <td class="right" data-ratio="338 692">49%</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart___init___py.html">apps\cart\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart_admin_py.html">apps\cart\admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart_cart_py.html">apps\cart\cart.py</a></td>
+                <td>48</td>
+                <td>35</td>
+                <td>0</td>
+                <td class="right" data-ratio="13 48">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart_models_py.html">apps\cart\models.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart_views_py.html">apps\cart\views.py</a></td>
+                <td>26</td>
+                <td>21</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 26">19%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_cart_webhook_py.html">apps\cart\webhook.py</a></td>
+                <td>25</td>
+                <td>15</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 25">40%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_core___init___py.html">apps\core\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_core_admin_py.html">apps\core\admin.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_core_models_py.html">apps\core\models.py</a></td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="1 1">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_core_views_py.html">apps\core\views.py</a></td>
+                <td>13</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 13">38%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_coupon___init___py.html">apps\coupon\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_coupon_admin_py.html">apps\coupon\admin.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_coupon_api_py.html">apps\coupon\api.py</a></td>
+                <td>13</td>
+                <td>10</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 13">23%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_coupon_models_py.html">apps\coupon\models.py</a></td>
+                <td>21</td>
+                <td>11</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 21">48%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_newsletter___init___py.html">apps\newsletter\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_newsletter_admin_py.html">apps\newsletter\admin.py</a></td>
+                <td>3</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="3 3">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_newsletter_api_py.html">apps\newsletter\api.py</a></td>
+                <td>8</td>
+                <td>4</td>
+                <td>0</td>
+                <td class="right" data-ratio="4 8">50%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_newsletter_models_py.html">apps\newsletter\models.py</a></td>
+                <td>6</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="5 6">83%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_order___init___py.html">apps\order\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_order_admin_py.html">apps\order\admin.py</a></td>
+                <td>33</td>
+                <td>9</td>
+                <td>0</td>
+                <td class="right" data-ratio="24 33">73%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_order_models_py.html">apps\order\models.py</a></td>
+                <td>34</td>
+                <td>3</td>
+                <td>0</td>
+                <td class="right" data-ratio="31 34">91%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_order_utils_py.html">apps\order\utils.py</a></td>
+                <td>14</td>
+                <td>8</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 14">43%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_order_views_py.html">apps\order\views.py</a></td>
+                <td>26</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 26">38%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store___init___py.html">apps\store\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store_admin_py.html">apps\store\admin.py</a></td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 6">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store_api_py.html">apps\store\api.py</a></td>
+                <td>116</td>
+                <td>95</td>
+                <td>0</td>
+                <td class="right" data-ratio="21 116">18%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store_models_py.html">apps\store\models.py</a></td>
+                <td>80</td>
+                <td>31</td>
+                <td>0</td>
+                <td class="right" data-ratio="49 80">61%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store_utilities_py.html">apps\store\utilities.py</a></td>
+                <td>22</td>
+                <td>16</td>
+                <td>0</td>
+                <td class="right" data-ratio="6 22">27%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_store_views_py.html">apps\store\views.py</a></td>
+                <td>46</td>
+                <td>37</td>
+                <td>0</td>
+                <td class="right" data-ratio="9 46">20%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_userprofile___init___py.html">apps\userprofile\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_userprofile_admin_py.html">apps\userprofile\admin.py</a></td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="2 2">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_userprofile_forms_py.html">apps\userprofile\forms.py</a></td>
+                <td>30</td>
+                <td>12</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 30">60%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_userprofile_models_py.html">apps\userprofile\models.py</a></td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 11">91%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="apps_userprofile_views_py.html">apps\userprofile\views.py</a></td>
+                <td>21</td>
+                <td>14</td>
+                <td>0</td>
+                <td class="right" data-ratio="7 21">33%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="manage_py.html">manage.py</a></td>
+                <td>12</td>
+                <td>2</td>
+                <td>0</td>
+                <td class="right" data-ratio="10 12">83%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="saulgadgets___init___py.html">saulgadgets\__init__.py</a></td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="0 0">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="saulgadgets_settings_py.html">saulgadgets\settings.py</a></td>
+                <td>35</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="35 35">100%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="saulgadgets_sitemaps_py.html">saulgadgets\sitemaps.py</a></td>
+                <td>16</td>
+                <td>5</td>
+                <td>0</td>
+                <td class="right" data-ratio="11 16">69%</td>
+            </tr>
+            <tr class="file">
+                <td class="name left"><a href="saulgadgets_urls_py.html">saulgadgets\urls.py</a></td>
+                <td>18</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="right" data-ratio="18 18">100%</td>
+            </tr>
+        </tbody>
+    </table>
+    <p id="no_rows">
+        No items found using the specified filter.
+    </p>
+</div>
+<div id="footer">
+    <div class="content">
+        <p>
+            <a class="nav" href="https://coverage.readthedocs.io">coverage.py v5.3</a>,
+            created at 2021-01-21 19:08 +0100
+        </p>
+    </div>
+</div>
+</body>
+</html>
