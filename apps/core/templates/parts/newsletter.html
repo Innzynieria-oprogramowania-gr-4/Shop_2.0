@@ -1,10 +1,11 @@
-<div class="newsletter-wrapper" id="newsletter-wrapper">
-    <h2 class="subtitle" style="font-family: Verdana; font-size: 20px">Newsletter</h2>
+<div class="newsletter-wrapper" id="newsletter-wrapper" style="margin: 10px;">
+{#    <h2 class="subtitle" style="font-family: Verdana; font-size: 20px; text-align: center;">Newsletter</h2>#}
 
     <form v-on:submit.prevent="onSubmit">
-        <div class="field has-addons">
+        <div class="field has-addons" style="justify-content: center;">
+            <label class="subtitle" for="newsletter-f" style="font-family: Verdana; font-size: 20px; text-align: center; padding: 5px; margin-right: 10px;">Newsletter</label>
             <div class="control">
-                <input type="email" v-model="email" name="email" class="input" placeholder="Your e-mail address...">
+                <input type="email" v-model="email" name="email" class="input" id="newsletter-f" style="width: 300px;" placeholder="Your e-mail address...">
             </div>
             <div class="control">
                 <button class="button is-success">Submit</button>
