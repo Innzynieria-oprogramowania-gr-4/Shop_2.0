@@ -1,15 +1,22 @@
 from django.db import models
 
+# model wykorzystywany do przechowywania kuponów
 class Coupon(models.Model):
+    # kod, który użytkownik musi wprowadzić, aby uzyskac rabat podczas zakupów
     code = models.CharField(max_length=50, unique=True)
+    # wysokość rabatu
     value = models.IntegerField()
+    # wartość boolowska określająca, czy dany kupon jest aktywny
     active = models.BooleanField(default=True)
+    # dostępne
     num_available = models.IntegerField(default=1)
+    # użyte
     num_used = models.IntegerField(default=0)
 
     def __str__(self):
         return self.code
-    
+
+    # użyteczność kuponu
     def can_use(self):
         is_active = True
 

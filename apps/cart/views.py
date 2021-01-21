@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 
 from .cart import Cart
 
+# widok cart_detail pobiera bieżący koszyk na zakupy i wyświetla jego zawartość
 def cart_detail(request):
     cart = Cart(request)
     productsstring = ''
@@ -42,6 +43,7 @@ def cart_detail(request):
 
     return render(request, 'cart.html', context)
 
+# widok podziękowania za udaną transakcję
 def success(request):
     cart = Cart(request)
     cart.clear()

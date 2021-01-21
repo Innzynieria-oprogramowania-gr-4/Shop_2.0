@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 
 from apps.store.models import Product
 
+# model Order zawiera kolumny przeznaczone do przechowywania informacjii o kiencie
+# oraz kolumnę o nazwie paid typu boolenowskiego
 class Order(models.Model):
     ORDERED = 'ordered'
     SHIPPED = 'shipped'
@@ -37,10 +39,13 @@ class Order(models.Model):
 
     def __str__(self):
         return '%s' % self.first_name
-    
+
+    # metoda odpowiedzialna za pobieranie całkowitej wartości produktów kupowanych w tym zamówieniu
     def get_total_quantity(self):
         return sum(int(item.quantity) for item in self.items.all())
-    
+
+# model pozwala na przechowywanie informacji o produkcie, zamawianej ilości
+# i cenie jednostkowej danego produktu
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, related_name='items', on_delete=models.DO_NOTHING)

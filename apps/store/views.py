@@ -31,6 +31,7 @@ def search(request):
 
     return render(request, 'search.html', context)
 
+# pobieranie iwyświetlanie pojedynczego produktu
 def product_detail(request, category_slug, slug):
     product = get_object_or_404(Product, slug=slug)
     product.num_visits = product.num_visits + 1

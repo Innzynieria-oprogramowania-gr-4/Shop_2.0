@@ -1,7 +1,9 @@
 from django.contrib.auth.models import User
 from django.db import models
 
+# model profilu
 class Userprofile(models.Model):
+    # definicja relacji "jeden do jednego"
     user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
     address = models.CharField(max_length=255, blank=True, null=True)
     zipcode = models.CharField(max_length=255, blank=True, null=True)

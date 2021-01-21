@@ -1,3 +1,5 @@
+# wzorce adresów URL powalają mapować adresy URL na widoki
+
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
@@ -21,6 +23,7 @@ from .sitemaps import StaticViewSitemap, CategorySitemap, ProductSitemap
 sitemaps = {'static': StaticViewSitemap, 'product': ProductSitemap, 'category': CategorySitemap}
 
 urlpatterns = [
+    # wzorce adresów
     path('', frontpage, name='frontpage'),
     path('search/', search, name='search'),
     path('cart/', cart_detail, name='cart'),

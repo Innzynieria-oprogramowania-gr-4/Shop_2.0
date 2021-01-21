@@ -4,11 +4,17 @@ from django.db import models
 from PIL import Image
 from django.contrib.auth.models import User
 
+# model Category
 class Category(models.Model):
+    # klucz
     parent = models.ForeignKey('self', related_name='children', on_delete=models.CASCADE, blank=True, null=True)
+    # nazwa kategorii
     title = models.CharField(max_length=255)
+    # slug dla kategorii
     slug = models.SlugField(max_length=255)
+    # zamówienie
     ordering = models.IntegerField(default=0)
+    # zawartość
     is_featured = models.BooleanField(default=False)
 
     class Meta:
@@ -17,20 +23,30 @@ class Category(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+    # zwracanie kanonicznego adresu URL obiektu
     def get_absolute_url(self):
         return '/%s/' % (self.slug)
 
 class Product(models.Model):
+    # klucz obcy dla modelu Category, relacja tupu "wiele do jednego"
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     parent = models.ForeignKey('self', related_name='variants', on_delete=models.CASCADE, blank=True, null=True)
+    # nazwa
     title = models.CharField(max_length=255)
+    # slug dla produktu
     slug = models.SlugField(max_length=255)
+    # opis
     description = models.TextField(blank=True, null=True)
+    # cena
     price = models.FloatField()
+    # zawartość
     is_featured = models.BooleanField(default=False)
+    # dostępność
     num_available = models.IntegerField(default=1)
+    # przeglądanie przez uzytkowników
     num_visits = models.IntegerField(default=0)
+    # ostatnie odwiedzanie
     last_visit = models.DateTimeField(blank=True, null=True)
 
     image = models.ImageField(upload_to='uploads/', blank=True, null=True)

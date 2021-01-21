@@ -61,12 +61,20 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
 
+    #dodane aplikacje:
+    #koszyk
     'apps.cart',
+    #kupon
     'apps.coupon',
+    # strona startowa
     'apps.core',
+    #newsletter
     'apps.newsletter',
+    # zamówienie
     'apps.order',
+    # sklep
     'apps.store',
+    # profil użytkownika
     'apps.userprofile'
 ]
 

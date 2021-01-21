@@ -8,14 +8,17 @@ from django.utils.safestring import mark_safe
 
 from .models import Order, OrderItem
 
+#nazwaz zamówienia
 def order_name(obj):
     return '%s %s' % (obj.first_name, obj.last_name)
 order_name.short_description = 'Name'
 
+#generowanie pliku w formie pdf
 def order_pdf(obj):
     return mark_safe('<a href="{}">PDF</a>'.format(reverse('admin_order_pdf', args=[obj.id])))
 order_name.short_description = 'PDF'
 
+# informacje o dostawie
 def admin_order_shipped(modeladmin, request, queryset):
     for order in queryset:
         order.shipped_date = datetime.datetime.now()
@@ -26,6 +29,10 @@ def admin_order_shipped(modeladmin, request, queryset):
         send_mail('Order sent', 'Your order has been sent!', 'noreply@saulgadgets.com', ['mail@saulgadgets.com', order.email], fail_silently=False, html_message=html)
     return 
 admin_order_shipped.short_description = 'Set shipped'
+
+# dla modelu OrderItem wykorzystujemy klasę ModelInline, aby dołączyć go na miejscu, w klasie
+# OrderAdmin. Taki sposób dołączenie modelu pozwala na jego pojawienie sie na tej samej stronie
+# edycji, tak jak w przypadku modelu nadzrzedenego
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem

@@ -1,9 +1,11 @@
+# widok pozwalający odwiedzającemy na zarejestrowanie się w sklepie
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 from .models import Userprofile
 
+#formularz modelu dla modelu User
 class UserprofileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(UserprofileForm, self).__init__(*args, **kwargs)

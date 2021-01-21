@@ -25,6 +25,7 @@ def signup(request):
     
     return render(request, 'signup.html', {'form': form, 'userprofileform': userprofileform})
 
+# uwierzytelnienie użytkownika
 @login_required
 def myaccount(request):
     return render(request, 'myaccount.html')
