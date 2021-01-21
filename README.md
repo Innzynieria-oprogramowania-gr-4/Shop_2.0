@@ -2,8 +2,8 @@
 
 Aplikacja sklepu internetowego. Użytkownicy sklepu mogą 
 przeglądać katalog produktów i dodawać produkty do koszyka 
-na zakupy. Po wybraniu wszystkich produktów uzytkownik
-będzie mógł złozyć zamówienie i sfinalizować zakup.
+na zakupy. Po wybraniu wszystkich produktów użytkownik
+będzie mógł złożyć zamówienie i sfinalizować zakup.
 
 Funkcjonalności sklepu:
 * utworzenie modeli katalogu produktów, dodanie ich 
