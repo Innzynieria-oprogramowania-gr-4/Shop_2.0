@@ -10,6 +10,8 @@ class UserprofileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(UserprofileForm, self).__init__(*args, **kwargs)
 
+        # Widżet obsługuje renderowanie HTML i wyodrębnianie danych ze słownika
+        # GET / POST, który odpowiada widżetowi.
         self.fields['address'].widget.attrs['class'] = 'input'
         self.fields['zipcode'].widget.attrs['class'] = 'input'
         self.fields['place'].widget.attrs['class'] = 'input'

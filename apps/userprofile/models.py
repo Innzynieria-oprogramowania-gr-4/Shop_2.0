@@ -4,6 +4,8 @@ from django.db import models
 # model profilu
 class Userprofile(models.Model):
     # definicja relacji "jeden do jednego"
+    # CASCADE - kiedy obiekt, do którego istnieje odniesienie, zostanie usunięty,
+    # usuń także obiekty, które mają do niego odniesienia
     user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
     address = models.CharField(max_length=255, blank=True, null=True)
     zipcode = models.CharField(max_length=255, blank=True, null=True)
@@ -13,4 +15,6 @@ class Userprofile(models.Model):
     def __str__(self):
         return '%s' % self.user.username
 
+# get_or_create zwraca krotkę, pierwszy element  jest instancją, a drugi to wartość logiczna,
+# która mówi, czy instancja została nowo utworzona, czy nie.
 User.userprofile = property(lambda u:Userprofile.objects.get_or_create(user=u)[0])
