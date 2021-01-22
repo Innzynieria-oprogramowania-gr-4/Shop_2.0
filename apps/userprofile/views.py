@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 
 from .forms import SignUpForm, UserprofileForm
 
-# logowanie
+# rejestracja
 def signup(request):
     # Metoda HTTP POST.Oznacza to, że formularz został przesłany przez użytkownika
     # i możemy znaleźć jej wypełnione odpowiedzi za pomocą request.POST QueryDict
